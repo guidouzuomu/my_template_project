@@ -44,7 +44,7 @@ Docker Composeを使用して、ローカルにPostgreSQLのデータベース�
 **Bash**
 
 ```
-docker compose up -d
+docker compose -f docker/compose.yaml up -d
 ```
 
 *(※データベースを停止・削除する場合は `docker compose down` を実行します)*
