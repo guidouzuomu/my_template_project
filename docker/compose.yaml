@@ -1,0 +1,12 @@
+services:
+  postgres:
+    container_name: dev-db
+    build: ./image/postgres
+    restart: always
+    ports: 
+      - "6543:5432"
+    volumes:
+      - ./postgres/init:/docker-entrypoint-initdb.d
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "postgres"
